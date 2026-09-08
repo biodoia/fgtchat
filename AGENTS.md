@@ -7,7 +7,7 @@ Estende il workspace `/home/lisergico25/projects/AGENTS.md`.
 
 1. **No Tailscale** — non aggiungere `tailscaled`, `tsnet`, `*.ts.net`, auth tailnet.
 2. **Rete** — bind `127.0.0.1:<porta>`; esporre solo via **aigoproxy** (`*.braigo.dev`).
-3. **DB** — PostgreSQL/pgvector tramite **memogo**; secrets in **goleciave**.
+3. **DB** — PostgreSQL/pgvector **provisionato da memogo** (memogo installa il DB, DSN in goleciave, driver nativo pgx; memogo NON è un database né un endpoint dati); secrets in **goleciave**.
 4. **Cache** — **PebbleDB** pure Go; zero CGO; no SQLite autoritativo.
 5. **LLM** — **gogatewai** (non LiteLLM legacy).
 6. **Memoria** — mem0 locale `user_id=biodoia` (search_memories / add_memory).

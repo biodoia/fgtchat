@@ -29,7 +29,7 @@ Repository: `github.com/biodoia/fgtchat` · Go `1.21`.
 
 ### Storage & secrets
 
-- Persistenza relazionale/vettoriale: PostgreSQL + pgvector via **memogo**.
+- Persistenza relazionale/vettoriale: PostgreSQL + pgvector, database **provisionato da memogo** (DSN in goleciave, driver nativo). memogo non è mai nel data path.
 - Credenziali: **goleciave** (mai secret in chiaro in repo).
 - Cache locale: **PebbleDB** (pure Go).
 - Vietato: SQLite/BoltDB/BadgerDB come store autoritativo; CGO non abilitato per binari di produzione.

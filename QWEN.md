@@ -6,7 +6,7 @@ Vincoli locali per agent (Qwen / Codex / Grok / Claude) su questo repo.
 
 - Vietato Tailscale (`tailscaled`, `tsnet`, `*.ts.net`).
 - Rete = **aigoproxy** + bind `127.0.0.1`.
-- DB = **memogo** (PG+pgvector) + secrets **goleciave**.
+- DB = PostgreSQL+pgvector **provisionato da memogo** (memogo installa il DB e mette il DSN in goleciave; NON è un datastore, mai nel data path) + secrets **goleciave**.
 - Cache = **PebbleDB**. CGO_ENABLED=0.
 - LLM = **gogatewai**. Memoria agent = **mem0** (`biodoia`).
 
