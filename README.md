@@ -1,7 +1,7 @@
 # fgtchat
 
 [![fgt-sdk](https://img.shields.io/badge/fgt--sdk-v3.0-blueviolet)](https://github.com/biodoia)
-[![No Tailscale](https://img.shields.io/badge/network-aigoproxy-success)](https://github.com/biodoia/aigoproxy)
+[![aigoproxy](https://img.shields.io/badge/network-aigoproxy-success)](https://github.com/biodoia/aigoproxy)
 [![Aligned](https://img.shields.io/badge/docs-aligned%202026-08-02-brightgreen)]()
 
 > Repository: `github.com/biodoia/fgtchat` · Go `1.21`.
@@ -33,7 +33,7 @@ Repository: `github.com/biodoia/fgtchat` · Go `1.21`.
 
 - **Rete**: listener `127.0.0.1:<porta>` · host pubblici `*.braigo.dev` via **aigoproxy**
 - **Memoria agenti**: mem0 MCP `http://127.0.0.1:12000` (`user_id=biodoia`)
-- **Tailscale**: **rimosso** dall'ecosistema (2026-08-01) — vietato in docs e codice nuovo
+- **Edge unico**: aigoproxy; listener applicativi su `127.0.0.1`.
 
 ## Avvio locale
 

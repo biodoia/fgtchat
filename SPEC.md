@@ -25,7 +25,7 @@ Repository: `github.com/biodoia/fgtchat` · Go `1.21`.
 - Listener su **`127.0.0.1:<porta>`** (mai `0.0.0.0` per servizi app).
 - Hostname pubblici: **`fgtchat.braigo.dev`** (o sottodomini dedicati) tramite **aigoproxy**.
 - Registrazione rotte: `POST http://127.0.0.1:80/api/routes`.
-- **Tailscale / tsnet / `*.ts.net`**: vietati (direttiva 2026-08-01).
+- **Perimetro di rete**: solo loopback + aigoproxy, mantenendo l'autenticazione prevista.
 
 ### Storage & secrets
 
@@ -43,11 +43,11 @@ Repository: `github.com/biodoia/fgtchat` · Go `1.21`.
 
 - **Rete**: listener `127.0.0.1:<porta>` · host pubblici `*.braigo.dev` via **aigoproxy**
 - **Memoria agenti**: mem0 MCP `http://127.0.0.1:12000` (`user_id=biodoia`)
-- **Tailscale**: **rimosso** dall'ecosistema (2026-08-01) — vietato in docs e codice nuovo
+- **Edge unico**: aigoproxy; listener applicativi su `127.0.0.1`.
 
 ## S3: Out of scope
 
-- Non reintrodurre Tailscale come requisito di rete.
+- Mantenere aigoproxy come unico edge di rete.
 - Non documentare bind pubblici diretti senza aigoproxy.
 
 ## Verifica

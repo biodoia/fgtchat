@@ -19,7 +19,7 @@
 ## 2. 🚨 Analisi delle Derive Tecnologiche & Allucinazioni
 > ℹ️ **Stato del Repo**: Repository attivo nella categoria `Tool, Integration or Specialized Repo`. Necessita aggiornamento documentale.
 
-✅ **Rete**: Nessun riferimento obsoleto a Tailscale rilevato.
+ℹ️ **Rete (audit storico)**: nell'audit non risultavano riferimenti alla rete dismessa. Verificare lo stato attuale rispetto al vincolo loopback + aigoproxy.
 ✅ **Storage / CGO**: Conforme a PebbleDB / memogo / zero-CGO.
 ✅ **LLM Proxy**: Nessun proxy deprecato rilevato.
 ✅ **SDK Standard**: Allineato alle specifiche moderne di ecosistema.
@@ -38,7 +38,7 @@ Una volta approvata questa proposta dagli agenti di refactoring profondo, si pro
 
 1. **`README.md`**:
    - Aggiornare l'architettura allineandola a `fgt-sdk v3.0` (1 Body systemd + N Heads).
-   - Rimuovere ogni menzione di Tailscale o SQLite.
+   - Allineare la rete a loopback + aigoproxy e rimuovere le indicazioni obsolete su SQLite.
    - Inserire le istruzioni di registrazione delle rotte su `aigoproxy` (`POST http://127.0.0.1:80/api/routes`).
 
 2. **`SPEC.md` / `ARCHITECTURE.md`**:
@@ -46,7 +46,7 @@ Una volta approvata questa proposta dagli agenti di refactoring profondo, si pro
    - Definire i punti di integrazione con `mem0` per la memoria persistente dell'agente.
 
 3. **`AGENTS.md` / `QWEN.md`**:
-   - Sincronizzare le regole operative dell'agente con la direttiva ecosistema 2026-08-01 (Zero Tailscale, Mem0 obbligatorio, PebbleDB per la cache).
+   - Sincronizzare le regole operative dell'agente con la direttiva ecosistema 2026-08-01 (loopback + aigoproxy, Mem0 obbligatorio, PebbleDB per la cache).
 
 ---
 
@@ -62,4 +62,4 @@ Una volta approvata questa proposta dagli agenti di refactoring profondo, si pro
 - nocodaigo explode --no-llm: eseguito
 - godocai scan: eseguito
 - Docs aggiornati: README.md, SPEC.md, AGENTS.md, QWEN.md
-- Standard: fgt-sdk v3.0 / no Tailscale / aigoproxy / memogo / goleciave / PebbleDB / gogatewai / mem0
+- Standard: fgt-sdk v3.0 / aigoproxy / memogo / goleciave / PebbleDB / gogatewai / mem0

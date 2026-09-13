@@ -4,7 +4,7 @@ Vincoli locali per agent (Qwen / Codex / Grok / Claude) su questo repo.
 
 ## REGOLA #1 — Ecosistema Biodoia 2026-08-01
 
-- Vietato Tailscale (`tailscaled`, `tsnet`, `*.ts.net`).
+- Esporre i servizi solo tramite aigoproxy, con listener su `127.0.0.1`.
 - Rete = **aigoproxy** + bind `127.0.0.1`.
 - DB = PostgreSQL+pgvector **provisionato da memogo** (memogo installa il DB e mette il DSN in goleciave; NON è un datastore, mai nel data path) + secrets **goleciave**.
 - Cache = **PebbleDB**. CGO_ENABLED=0.
@@ -13,7 +13,7 @@ Vincoli locali per agent (Qwen / Codex / Grok / Claude) su questo repo.
 ## REGOLA #2 — Verità = codice
 
 Non fidarti di docs vecchie se contraddicono `go.mod` / `internal/`.
-Se la doc parla di Tailscale e il codice no: correggi la doc, non il codice verso Tailscale.
+Se la documentazione descrive una rete dismessa, allineala al codice e al vincolo loopback + aigoproxy senza reintrodurre dipendenze obsolete.
 
 ## REGOLA #3 — Docs tools
 
